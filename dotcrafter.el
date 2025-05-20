@@ -112,9 +112,9 @@ It finds org code block output paths."
           (save-buffer))))))
 
 (defun dotcrafter-tangle-org-file (&optional org-file)
-  "Tangles a single .org file relative to the path in
-dotfiles-folder.  If no file is specified, tangle the current
-file if it is an org-mode buffer inside of dotfiles-folder."
+  "Tangles ORG-FILE file relative to the path indotfiles-folder.
+If no file is specified, tangle the current file if it is an 'org-mode'
+buffer inside of dotfiles-folder."
   (interactive)
   ;; Suppress prompts and messages
   (let ((org-confirm-babel-evaluate nil)
@@ -136,8 +136,7 @@ file if it is an org-mode buffer inside of dotfiles-folder."
                     dotcrafter-dotfiles-folder))
 
 (defun dotcrafter--link-config-file (config-file)
-  ;; Get the "path parts", basically the name of each directory and file in the
-  ;; path of config-file
+  "Get the path parts of each directory and file in  CONFIG-FILE."
   (let* ((path-parts
           (split-string (file-relative-name (expand-file-name config-file)
                                             (dotcrafter--resolve-config-files-path))
