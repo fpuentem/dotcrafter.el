@@ -17,8 +17,8 @@ for testing purposes."
   :group 'dotfiles)
 
 (defcustom dotcrafter-org-files '()
-  "The list of org-mode files under the `dotcrafter-dotfiles-folder'
-which contain configuration files that should be tangled"
+  "The list of `org-mode' files under the `dotcrafter-dotfiles-folder'.
+It contain configuration files that should be tangled."
   :type '(list string)
   :group 'dotfiles)
 
